@@ -1,0 +1,33 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1B262C;
+    color: #FFFFFF;
+    height: 10vh;
+
+    .logo{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        margin: 1rem 0 1rem 8rem;
+    }
+
+    .menu{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 1.8rem;
+        margin: 1rem 8rem 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+            color: #FFFFFF;
+            margin-left: 50px;
+        }
+
+        
+    }
+}

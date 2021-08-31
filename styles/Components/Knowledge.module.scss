@@ -1,0 +1,66 @@
+.main_known{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B262C;
+    opacity: 0.95;
+    color: #FFFFFF;
+
+    h2{
+        font-size: 2.3rem;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .known_div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 25px 8rem;
+        color: #FFFFFF;
+
+        .card_known{
+            height: auto;
+            flex-grow: 1;
+            padding: 20px 15px;
+            margin: 10px;
+            position: relative;
+            background-color: #161A1F;
+            border-radius: 8px;
+            flex-basis: calc(33% - 20px);
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            
+            > i{
+                padding: 20px 0;
+                font-size: 68px;
+                margin-bottom: 1rem;
+
+                
+            }
+
+            .lify{
+                padding: 20px 0;
+                width: 108px;
+                height: 108px;
+                color: #FFFFFF;
+                margin-bottom: 1rem;
+            }
+
+            span{
+                
+                color: #f6f6f6;
+                line-height: 14px;
+                font-size: 1.4rem;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+    }
+}

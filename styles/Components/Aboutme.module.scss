@@ -1,0 +1,59 @@
+.main_about_me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B262C;
+    opacity: 0.95;
+    color: #FFFFFF;
+    
+    h2{
+        font-size: 2.3rem;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    
+    .about_content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 10rem;
+        width: 100%;
+
+        .logo_perfil{
+            border-radius: 50%; 
+            height: 400px; 
+            width: 400px;
+            
+        }
+
+        .about_div{
+            padding-top: 1rem;
+            margin-left: 10rem;
+
+            span{
+                font-size: 1.8rem;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .button{
+                margin-top: 2rem;
+                background-color: #0F4C75;
+                height: 45px;
+                width: 140px;
+                border-radius: 8px;
+                
+                a{
+                    color: #f6f6f6;
+                    line-height: 24px;
+                    font-size: 1.8rem;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+        }
+    }
+}

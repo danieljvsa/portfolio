@@ -1,0 +1,113 @@
+.main_project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B262C;
+    color: #FFFFFF;
+
+    h2{
+        font-size: 2.3rem;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .card_catalog{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 25px 8rem;
+        color: #FFFFFF;
+
+        .card{
+            height: auto;
+            flex-grow: 1;
+            padding: 40px 15px;
+            margin: 10px;
+            position: relative;
+            background-color: #161A1F;
+            border-radius: 8px;
+            flex-basis: calc(33% - 20px);
+            color: #FFFFFF;
+
+            .card_content{
+                //padding: 2rem 1rem;
+
+                span{
+                    font-size: 2rem;
+                    font-weight: 500;
+                    font-family: 'Montserrat', sans-serif;
+                    
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    font-family: 'Montserrat', sans-serif;
+                    margin: 20px 0;
+                }
+            }
+
+            .button_div{
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                padding: 0 1rem;
+
+                .button{
+                    margin-top: 1rem;
+                    margin-right: 1rem;
+                    background-color: #0F4C75;
+                    height: 45px;
+                    width: 140px;
+                    border-radius: 8px;
+                    
+                    a{
+                        color: #f6f6f6;
+                        font-family: 'Montserrat', sans-serif;
+                        line-height: 14px;
+                        font-size: 1.4rem;
+                        margin-top: 2rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+
+            .tech_div{
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                padding: 0 1rem;
+                margin-top: 2rem;
+
+                .card_tech{
+                    background-color: #181818;
+                    color: #f6f6f6;
+                    border-radius: 8px;
+                    margin-right: 1rem;
+                    padding: 10px;
+
+
+                    span{
+                        font-size: 1.3rem;
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                }
+
+            }
+        }
+    }
+    span{
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+
+        a{
+            color: #f6f6f6;
+            line-height: 24px;
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+}

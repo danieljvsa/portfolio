@@ -1,0 +1,59 @@
+.main_about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B262C;
+    opacity: 1;
+    color: #FFFFFF;
+
+    h2{
+        font-size: 2.3rem;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        margin: 20px 0;
+    }
+
+    .email{
+        margin: 20px 0;
+        border-radius: 20px;
+        background-color: #181818;
+        padding: 10px 20px;
+    }
+
+    p, .email{
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif;   
+    }
+
+    .about_link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 15%;
+
+        .button_link{
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #181818;
+            padding: 10px 20px;
+            cursor: pointer;
+            
+            a{
+                font-size: 1.4rem;
+                font-weight: 400;
+                font-family: 'Montserrat', sans-serif;
+                color: #f6f6f6;
+            }
+        }
+
+        button:hover{
+            opacity: 0.7;
+        }
+    }
+}
