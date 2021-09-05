@@ -57,3 +57,19 @@
         }
     }
 }
+
+@media (max-width: 1000px) {
+    
+    .about_content{
+        text-align: center;
+        .about_div{
+            padding: 0 !important;
+            margin: 2rem !important;
+        }
+        .logo_perfil{
+            display: none !important;
+        }
+    
+    }
+
+}

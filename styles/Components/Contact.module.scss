@@ -15,7 +15,8 @@
     }
 
     p{
-        margin: 20px 0;
+        margin: 20px 2rem;
+        text-align: center;
     }
 
     .email{
@@ -33,12 +34,12 @@
 
     .about_link{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        width: 15%;
 
         .button_link{
             margin-bottom: 20px;
+            margin-right: 1rem;
             border-radius: 8px;
             background-color: #181818;
             padding: 10px 20px;

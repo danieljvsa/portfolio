@@ -8,6 +8,7 @@ export function Header(){
             <div className={styles.logo}>
                 <h1>Portfólio</h1>
             </div>
+            <button>&#9776;</button>
             <div className={styles.menu}>
                 <p><Link href="#about-me"><a>Sobre mim</a></Link></p>
                 <p><Link href="#projects"><a>Projetos</a></Link></p>

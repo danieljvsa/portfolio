@@ -45,7 +45,7 @@ export function Projects(){
                     </div>
                 </div>
             </div>
-            <span><Link href="#"><a>Repositórios do Github</a></Link></span>
+            <span><Link href="https://github.com/danieljvsa?tab=repositories"><a>Repositórios do Github</a></Link></span>
         </div>
     )
 }

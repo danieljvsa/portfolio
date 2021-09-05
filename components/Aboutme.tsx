@@ -19,7 +19,7 @@ export function Aboutme(){
                     com a introdução de programação na licenciatura, <br />
                     o que me levou a investir meu tempo nesta área.</span> <br />
                     <button className={styles.button}>
-                        <Link href="#"><a>Linkedin</a></Link>
+                        <Link href="https://www.linkedin.com/in/danieljvsa/"><a>Linkedin</a></Link>
                     </button>              
                 </div>                 
             </div>

@@ -9,8 +9,8 @@ export function Contact(){
             <p>Se quiser conversar comigo, não hesite em mandar uma mensagem</p>
             <span className={styles.email}>💌 danielviana18@gmail.com</span>
             <div className={styles.about_link}>
-                <button className={styles.button_link}><Link href="#"><a>Linkedin</a></Link></button>
-                <button className={styles.button_link}><Link href="#"><a>Github</a></Link></button>
+                <button className={styles.button_link}><Link href="https://www.linkedin.com/in/danieljvsa/"><a>Linkedin</a></Link></button>
+                <button className={styles.button_link}><Link href="https://github.com/danieljvsa"><a>Github</a></Link></button>
             </div>
             <p>Criado por Daniel Sá</p>
         </div>

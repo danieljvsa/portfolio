@@ -4,13 +4,28 @@
     align-items: center;
     background-color: #1B262C;
     color: #FFFFFF;
-    height: 10vh;
+    height: auto;
 
     .logo{
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 1rem;
-        margin: 1rem 0 1rem 8rem;
+        margin: 2rem 0 2rem 8rem;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        color: #FFF;
+        font-size: 36px;
+        position: absolute;
+        right: 8rem;
+        top: 10px;
+        display: none;
+    }
+
+    button:focus~.menu {
+        height: auto !important;
     }
 
     .menu{
@@ -29,5 +44,48 @@
         }
 
         
+    }
+}
+
+@media (max-width: 1000px) {
+    .header{
+        flex-direction: column !important;
+        padding: 0 !important;
+        align-items: flex-start !important;
+        
+        button {
+            display: flex !important;
+        }
+        
+        .menu{           
+            overflow: hidden !important;
+            text-align: center !important;
+            flex-direction: column !important;
+            width: 100% !important;
+            margin: 0 !important;
+            height: 0 !important;
+
+            p{
+                margin: 1rem 0 !important;
+                width: 100% !important;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 700px) {
+    .logo{
+        margin: 2rem !important;
+    }
+    .header{
+        vertical-align: middle !important;
+        button{
+            right: 2rem !important;
+        }
+
+        .menu{
+            padding-right: 3rem !important;
+        }
     }
 }
