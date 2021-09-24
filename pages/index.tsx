@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import Script from 'next/script'
+import React from 'react'
 import { Aboutme } from '../components/Aboutme'
 import { Contact } from '../components/Contact'
 import { Header } from '../components/Header'
@@ -26,8 +27,7 @@ const Home: NextPage = () => {
             </main>
       </main>
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type="text/javascript" src="script.js"></script>
+      <Script type="text/javascript" src="script.js"></Script>
     </div>
   )
 }
