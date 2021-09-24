@@ -6,7 +6,7 @@
   Portfólio criado com o intuito de mostrar meus projetos ao decorrer da minha carreira.
 </h4>
 
-<img src="/assets/portfolio.PNG" align="center"></img>
+<img src="https://github.com/danieljvsa/portfolio/public/assets/portfolio.PNG" align="center"></img>
 
 <h4 align="center"><a href="https://danieljvsa.vercel.app/">Clique para visitar o projeto</a></h4>
 
