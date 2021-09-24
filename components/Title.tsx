@@ -15,7 +15,7 @@ export function Title(){
                         Desenvolvedor Full-Stack.
                     </p>
                     <button className={styles.button}>
-                        <a href="#" download>Baixar CV</a>
+                        <a href="/cv/danieljvsa_cv.pdf" download>Baixar CV</a>
                     </button>
                 </div>
                 <img src="/assets/logo-header.svg" alt="home-tech" className={styles.img_header} />

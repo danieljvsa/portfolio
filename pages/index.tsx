@@ -24,7 +24,10 @@ const Home: NextPage = () => {
                 <Knowledge />
                 <Contact />
             </main>
-        </main>
+      </main>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
     </div>
   )
 }

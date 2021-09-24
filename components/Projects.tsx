@@ -9,38 +9,38 @@ export function Projects(){
             <div className={styles.card_catalog}>
                 <div className={styles.card}>
                     <div className={styles.card_content}>
-                        <span>Em Breve</span>
+                        <span><Link href="#">Em Breve</Link></span>
                         <p>Pegue num café enquanto fazemos um novo projecto</p>
                     </div>
                 </div>
                 <div className={styles.card}>
                     <div className={styles.card_content}>
-                        <span>Em Breve</span>
+                        <span><Link href="#">Em Breve</Link></span>
                         <p>Pegue num café enquanto fazemos um novo projecto</p>
                     </div>
                     
                 </div>
                 <div className={styles.card}>
                     <div className={styles.card_content}>
-                        <span>Em Breve</span>
+                        <span><Link href="#">Em Breve</Link></span>
                         <p>Pegue num café enquanto fazemos um novo projecto</p>
                     </div>
                 </div>
                 <div className={styles.card}>
                     <div className={styles.card_content}>
-                        <span>Em Breve</span>
+                        <span><Link href="#">Em Breve</Link></span>
                         <p>Pegue num café enquanto fazemos um novo projecto</p>
                     </div>
                 </div>
                 <div className={styles.card}>
                     <div className={styles.card_content}>
-                        <span>Em Breve</span>
+                        <span><Link href="#">Em Breve</Link></span>
                         <p>Pegue num café enquanto fazemos um novo projecto</p>
                     </div>
                 </div>
                 <div className={styles.card}>
                     <div className={styles.card_content}>
-                        <span>Em Breve</span>
+                        <span><Link href="#">Em Breve</Link></span>
                         <p>Pegue num café enquanto fazemos um novo projecto</p>
                     </div>
                 </div>

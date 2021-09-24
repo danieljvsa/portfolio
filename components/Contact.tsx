@@ -7,7 +7,7 @@ export function Contact(){
         <div className={styles.main_about} id="contacts">
             <h2>Hello World!!</h2>
             <p>Se quiser conversar comigo, não hesite em mandar uma mensagem</p>
-            <span className={styles.email}>💌 danielviana18@gmail.com</span>
+            <span className={styles.email}><Link href="mailto:danielviana18@gmail.com">💌 danielviana18@gmail.com</Link></span>
             <div className={styles.about_link}>
                 <button className={styles.button_link}><Link href="https://www.linkedin.com/in/danieljvsa/"><a>Linkedin</a></Link></button>
                 <button className={styles.button_link}><Link href="https://github.com/danieljvsa"><a>Github</a></Link></button>

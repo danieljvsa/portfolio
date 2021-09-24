@@ -1,16 +1,14 @@
 .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #1B262C;
     color: #FFFFFF;
     height: auto;
+    //max-width: 1200px;*/
 
     .logo{
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 1rem;
-        margin: 2rem 0 2rem 8rem;
+        margin: 2rem 2rem;
     }
 
     button{
@@ -24,15 +22,15 @@
         display: none;
     }
 
-    button:focus~.menu {
+    /*button:focus~.menu {
         height: auto !important;
-    }
+    }*/
 
     .menu{
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 1.8rem;
-        margin: 1rem 8rem 1rem 0;
+        margin: 2rem 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -44,11 +42,12 @@
         }
 
         
+        
     }
 }
 
 @media (max-width: 1000px) {
-    .header{
+    .larguraMaxConatiner{
         flex-direction: column !important;
         padding: 0 !important;
         align-items: flex-start !important;
@@ -56,7 +55,15 @@
         button {
             display: flex !important;
         }
+
+        .menu.active {
+            height: auto !important;
+        }
         
+        /*#menu{
+            height: 0 !important;
+        }*/
+
         .menu{           
             overflow: hidden !important;
             text-align: center !important;
@@ -64,10 +71,16 @@
             width: 100% !important;
             margin: 0 !important;
             height: 0 !important;
+            
 
             p{
                 margin: 1rem 0 !important;
                 width: 100% !important;
+                text-align: center !important;
+
+                a{
+                    margin: 0 !important;
+                }
             }
         }
     }
@@ -78,14 +91,22 @@
     .logo{
         margin: 2rem !important;
     }
-    .header{
+    .larguraMaxConatiner{
         vertical-align: middle !important;
         button{
             right: 2rem !important;
         }
 
-        .menu{
-            padding-right: 3rem !important;
-        }
+        
     }
+}
+
+.larguraMaxConatiner{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1B262C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
 }

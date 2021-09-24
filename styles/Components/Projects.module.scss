@@ -5,6 +5,7 @@
     align-items: center;
     background-color: #1B262C;
     color: #FFFFFF;
+    
 
     h2{
         font-size: 2.3rem;
@@ -20,16 +21,19 @@
         flex-wrap: wrap;
         margin: 25px 8rem;
         color: #FFFFFF;
+        column-gap: 2rem;
+        row-gap: 2rem;
+        max-width: 1200px;
 
         .card{
-            height: auto;
             flex-grow: 1;
             padding: 40px 15px;
             margin: 10px;
             position: relative;
             background-color: #161A1F;
             border-radius: 8px;
-            flex-basis: calc(33% - 20px);
+            height: 20rem;
+            width: 30rem;
             color: #FFFFFF;
 
             .card_content{
@@ -40,6 +44,10 @@
                     font-weight: 500;
                     font-family: 'Montserrat', sans-serif;
                     
+                    a:hover{
+                        padding-bottom: 2px;
+                        border-bottom: 1px solid #FFFFFF;
+                    }
                 }
 
                 p{
@@ -109,5 +117,12 @@
             font-size: 2rem;
             font-family: 'Montserrat', sans-serif;
         }
+    }
+}
+
+
+@media (max-width: 300px) {
+    .card{
+        width: 25rem !important;
     }
 }
