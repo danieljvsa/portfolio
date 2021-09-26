@@ -17,7 +17,7 @@ O site é composto por 5 seções diferentes:
 - **Sobre mim:** Nessa seção tenho uma descrição dizendo um pouco sobre mim;
 - **Projetos:** Apresenta alguns projetos desenvolvidos e com link direto para os respectivos códigos no GitHub;
 - **Conhecimentos:** Nele apresentamos meus conhecimentos em algumas linguagens e tecnologias;
-- **Contactos:** Nele
+- **Contactos:** Nele estão as formas para entrar em contacto comigo;
 ---
 
 ## 💼 Tecnologias utilizadas
