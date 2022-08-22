@@ -47,6 +47,18 @@ export function Knowledge(){
                     <i><Icon icon="cib:mysql"/></i>
                     <span>MySQL</span>
                 </div>
+                <div className={styles.card_known}>
+                    <i><Icon icon="fontisto:java"/></i>
+                    <span>Java</span>
+                </div>
+                <div className={styles.card_known}>
+                    <i><Icon icon="teenyicons:c-sharp-solid"/></i>
+                    <span>C#</span>
+                </div>
+                <div className={styles.card_known}>
+                    <i><Icon icon="teenyicons:c-solid"/></i>
+                    <span>C</span>
+                </div>
             </div>
         </div>
     )
