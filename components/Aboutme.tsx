@@ -10,9 +10,9 @@ export function Aboutme(){
             <div className={styles.about_content}>
                 <img src="/assets/profile.png" alt="Perfil logo" className={styles.logo_perfil} />
                 <div className={styles.about_div}>
-                    <span>O meu nome é Daniel, tenho 21 anos, moro em Portugal,<br />
+                    <span>O meu nome é Daniel, tenho 22 anos, moro em Portugal,<br />
                     mais especificamente no Porto. <br /> <br /> 
-                    Atualmente, estou a estudar numa universidade e tenho <br />
+                    Atualmente, estou a procura de trabalho e tenho <br />
                     me dedicado também, sozinho, a aprender novas <br />
                     tecnologias.<br /> <br />
                     Iniciei os meus estudos em programação em 2019, <br />

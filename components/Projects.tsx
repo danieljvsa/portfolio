@@ -39,7 +39,7 @@ export function Projects(){
                 </div>
                 <div className={styles.card}>
                     <div className={styles.card_content}>
-                        <span><Link href="#">Naped</Link></span>
+                        <span><Link href="https://github.com/danieljvsa/naped">Naped</Link></span>
                         <p>Portal de noticias de entretenimento.</p>
                     </div>
                 </div>
