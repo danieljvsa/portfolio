@@ -6,28 +6,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Icon } from '@iconify/react'
 
 const skills = [
-    { name: 'HTML', icon: faHtml5, isFontAwesome: true },
-    { name: 'CSS', icon: faCss3, isFontAwesome: true },
-    { name: 'Firebase', icon: 'bx:bxl-firebase', isFontAwesome: false },
-    { name: 'Sass', icon: faSass, isFontAwesome: true },
-    { name: 'ReactJS', icon: faReact, isFontAwesome: true },
-    { name: 'Next.js', icon: 'file-icons:nextjs', isFontAwesome: false },
-    { name: 'NodeJS', icon: faNode, isFontAwesome: true },
+    { name: 'Node.js', icon: faNode, isFontAwesome: true },
+    { name: 'PostgreSQL', icon: 'cib:postgresql', isFontAwesome: false },
+    { name: 'AWS', icon: 'cib:amazon-aws', isFontAwesome: false },
+    { name: 'Redis', icon: 'cib:redis', isFontAwesome: false },
+    { name: 'Docker', icon: 'cib:docker', isFontAwesome: false },
+    { name: 'Kubernetes', icon: 'cib:kubernetes', isFontAwesome: false },
+    { name: 'Go', icon: 'cib:go', isFontAwesome: false },
+    { name: 'TypeScript', icon: 'cib:typescript', isFontAwesome: false },
+    { name: 'GraphQL', icon: 'cib:graphql', isFontAwesome: false },
     { name: 'MongoDB', icon: 'cib:mongodb', isFontAwesome: false },
-    { name: 'MySQL', icon: 'cib:mysql', isFontAwesome: false },
-    { name: 'Java', icon: 'fontisto:java', isFontAwesome: false },
-    { name: 'C#', icon: 'teenyicons:c-sharp-solid', isFontAwesome: false },
-    { name: 'C', icon: 'teenyicons:c-solid', isFontAwesome: false },
+    { name: 'Message Queues', icon: 'cib:rabbitmq', isFontAwesome: false },
+    { name: 'Python', icon: 'cib:python', isFontAwesome: false },
 ]
 
 export function Knowledge() {
     return (
         <section className="section bg-gradient-to-b from-background to-card-bg/30" id="known">
             <div className="section-container">
-                <div className="animate-fadeIn">
-                    <h2 className="section-title">Conhecimentos</h2>
+                <div className="mb-16">
+                    <h2 className="section-title">Technical Toolkit</h2>
                     <p className="section-subtitle">
-                        Tecnologias e ferramentas que domino
+                        Core technologies and tools I specialize in
                     </p>
                 </div>
 

@@ -7,10 +7,10 @@ export function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
 
     const menuItems = [
-        { label: 'Sobre mim', href: '#about-me' },
-        { label: 'Projetos', href: '#projects' },
-        { label: 'Conhecimentos', href: '#known' },
-        { label: 'Contactos', href: '#contacts' },
+        { label: 'About', href: '#about-me' },
+        { label: 'Projects', href: '#projects' },
+        { label: 'Skills', href: '#known' },
+        { label: 'Contact', href: '#contacts' },
     ]
 
     return (
@@ -19,7 +19,7 @@ export function Header() {
                 {/* Logo */}
                 <div className="flex-shrink-0">
                     <Link href="#" className="text-2xl font-bold bg-gradient-to-r from-accent to-highlight-light bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-base">
-                        Portfólio
+                        DSá
                     </Link>
                 </div>
 

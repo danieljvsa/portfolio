@@ -7,21 +7,27 @@ import { Header } from '../components/Header'
 import { Knowledge } from '../components/Knowledge'
 import { Projects } from '../components/Projects'
 import { Title } from '../components/Title'
+import { EngineeringFocus } from '../components/EngineeringFocus'
+import { ExperienceTimeline } from '../components/ExperienceTimeline'
+import { CurrentExploration } from '../components/CurrentExploration'
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Daniel Sá | Portfolio</title>
-        <meta name="description" content="Portfolio de Daniel Sá - Desenvolvedor Full-Stack" />
+        <title>Daniel Sá | Backend Engineer & Distributed Systems</title>
+        <meta name="description" content="Backend engineer specializing in distributed systems, geospatial platforms, and GNSS technology." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header />
       <main>
         <Title />
-        <Aboutme />
+        <EngineeringFocus />
+        <ExperienceTimeline />
         <Projects />
+        <CurrentExploration />
         <Knowledge />
+        <Aboutme />
         <Contact />
       </main>
     </>
