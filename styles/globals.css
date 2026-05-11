@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  a {
+    @apply transition-colors duration-base;
+  }
+
+  button {
+    @apply transition-all duration-base;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-20 px-4 md:px-8;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .card {
+    @apply bg-card-bg border border-card-border rounded-lg p-6 shadow-card transition-all duration-base;
+  }
+
+  .card:hover {
+    @apply shadow-card-hover border-accent-dark;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-base cursor-pointer gap-2 whitespace-nowrap;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent-dark hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-card-bg text-foreground border border-card-border hover:border-accent hover:bg-accent/5 active:scale-95;
+  }
+
+  .btn-icon {
+    @apply inline-flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-base;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-4 text-balance;
+  }
+
+  .section-subtitle {
+    @apply text-text-secondary text-lg md:text-xl mb-12 text-balance;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-highlight-light bg-clip-text text-transparent;
+  }
+
+  /* Link styles */
+  a {
+    @apply no-underline;
+  }
+
+  a:not(.btn):not(.card) {
+    @apply relative text-accent hover:text-accent-light transition-colors duration-base;
+  }
+
+  /* Focus states for accessibility */
+  button:focus-visible,
+  a:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-background rounded;
+  }
+}
+
+/* Enhanced animations */
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slideUp {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-base hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .text-glow {
+    @apply transition-all duration-base;
+  }
+
+  .text-glow:hover {
+    @apply text-accent drop-shadow-[0_0_8px_rgba(59,130,246,0.3)];
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-accent text-white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-card-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
