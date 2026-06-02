@@ -9,8 +9,8 @@ export default function Contact() {
         <div className="mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Let&apos;s Connect</h2>
           <p className="text-muted-foreground text-lg">
-            Interested in collaborating? I&apos;m always open to discussing distributed systems, 
-            architecture challenges, and interesting backend problems.
+            Interested in backend systems, telemetry, IoT or aerospace-related software? I&apos;m always open to discussing 
+            distributed systems, architecture challenges, and building reliable solutions.
           </p>
         </div>
 

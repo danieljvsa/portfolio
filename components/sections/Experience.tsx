@@ -5,25 +5,25 @@ import { Separator } from '@/components/ui/separator'
 export default function Experience() {
   const experiences = [
     {
-      role: 'Senior Backend Engineer',
-      company: 'OpenFuel',
-      period: '2023 - Present',
-      description: 'Architected and maintained distributed logistics platform handling real-time vehicle tracking and optimization.',
-      highlights: ['Microservices architecture', 'Real-time APIs', 'PostgreSQL optimization', 'AWS deployment']
+      role: 'Backend Developer',
+      company: 'CEiiA',
+      period: 'July 2025 – Present',
+      description: 'Software Engineer developing backend services and distributed systems for mobility and sustainability platforms. Working with Java, Spring Boot, Kafka, PostgreSQL, Redis, Docker, and microservices architectures to build scalable solutions supporting carbon accounting, digital mobility, and environmental innovation initiatives.',
+      highlights: ['Java', 'Spring Boot', 'Kafka', 'PostgreSQL', 'Microservices']
     },
     {
-      role: 'Backend Engineer',
-      company: 'Teltonika',
-      period: '2021 - 2023',
-      description: 'Developed IoT platform for device management and telemetry aggregation across 10k+ connected devices.',
-      highlights: ['Go backend', 'MQTT integration', 'Kubernetes', 'Real-time data processing']
+      role: 'Backend Developer',
+      company: 'Reckon.ai',
+      period: 'August 2023 - June 2025',
+      description: 'Responsible for developing and maintaining all backend microservices that powered the company\'s core business platform — enabling users to manage and monitor AI-driven retail machines. Worked across a microservices architecture using Node.js for most backend services, and Python to integrate and automate various internal systems and processes.',
+      highlights: ['Node.js', 'Python', 'Microservices', 'REST APIs', 'Docker']
     },
     {
-      role: 'Full Stack Developer',
-      company: 'Various Startups',
-      period: '2019 - 2021',
-      description: 'Built multiple products from concept to production, focusing on backend architecture and database design.',
-      highlights: ['Product development', 'System design', 'Database optimization', 'Infrastructure setup']
+      role: 'Software Developer',
+      company: 'Gisgeo',
+      period: 'September 2022 - July 2023',
+      description: 'Responsible for developing and maintaining backend servers that handled real-time vehicle tracking data over TCP and UDP protocols. Worked primarily with Java to ensure reliable data ingestion and processing, and supported the web application layer built with PHP. Initiated a transition project to modernize infrastructure by migrating legacy Java servers to a Python-based architecture.',
+      highlights: ['Java', 'PHP', 'Python', 'TCP/UDP', 'Real-time Systems']
     }
   ]
 

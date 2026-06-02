@@ -1,34 +1,46 @@
+'use client'
+
+import { useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 
 export default function Projects() {
+  const [activeFilter, setActiveFilter] = useState('All')
   const projects = [
     {
-      title: 'OpenFuel Platform',
-      description: 'Distributed fuel logistics optimization system with real-time vehicle tracking and route optimization.',
-      impact: '50+ concurrent users, <500ms query response',
-      techs: ['Node.js', 'PostgreSQL', 'Redis', 'AWS']
+      title: 'Teltonika-Go',
+      description: 'Open-source Go library for decoding and communicating with Teltonika GPS tracking devices.',
+      techs: ['Go', 'IoT', 'Telemetry', 'GPS', 'Networking'],
+      github: 'https://github.com/danieljvsa/teltonika-go',
+      category: 'Backend'
     },
     {
-      title: 'Teltonika-Go Platform',
-      description: 'IoT device management system handling telemetry from thousands of connected devices.',
-      impact: '10k+ devices managed, real-time metrics',
-      techs: ['Go', 'PostgreSQL', 'MQTT', 'Kubernetes']
+      title: 'Hopway',
+      description: 'Interactive route planning and travel exploration tool focused on train and transport journeys.',
+      techs: ['Maps', 'Travel', 'Routing', 'Web', 'JavaScript'],
+      live: 'https://danieljvsa.github.io/hopway/',
+      github: 'https://github.com/danieljvsa/hopway/',
+      category: 'Web'
     },
     {
-      title: 'GNSS Integrity Platform',
-      description: 'Multi-constellation GNSS signal validation and spoofing detection system with ML integration.',
-      impact: '99.9% spoofing detection accuracy',
-      techs: ['Python', 'TensorFlow', 'Signal Processing', 'AWS']
+      title: 'Altivo',
+      description: 'Personal portfolio and investment tracking platform supporting stocks, ETFs and crypto assets.',
+      techs: ['Finance', 'Portfolio', 'Analytics', 'JavaScript'],
+      live: 'https://danieljvsa.github.io/altivo/',
+      github: 'https://github.com/danieljvsa/altivo/',
+      category: 'Web'
     },
     {
-      title: 'Football Sanctions Dashboard',
-      description: 'Real-time sports data aggregation platform processing multi-source APIs with complex business logic.',
-      impact: '<100ms update latency, real-time analytics',
-      techs: ['Node.js', 'MongoDB', 'GraphQL', 'React']
+      title: 'Plate-Recon',
+      description: 'AI-powered license plate recognition platform combining computer vision, IoT devices and real-time processing.',
+      techs: ['AI', 'Computer Vision', 'IoT', 'Automation'],
+      github: 'https://github.com/danieljvsa/plate-recon',
+      category: 'AI'
     }
   ]
+  
+  const filteredProjects = activeFilter === 'All' ? projects : projects.filter(p => p.category === activeFilter)
 
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
@@ -38,24 +50,46 @@ export default function Projects() {
           <p className="text-muted-foreground text-lg">Production systems I&apos;ve architected and deployed</p>
         </div>
 
+        {/* Filter Buttons */}
+        <div className="mb-8 flex flex-wrap gap-2">
+          {['All', 'Backend', 'Web', 'AI', 'Open Source'].map((filter) => (
+            <Badge
+              key={filter}
+              variant={activeFilter === filter ? 'default' : 'outline'}
+              className="cursor-pointer"
+              onClick={() => setActiveFilter(filter)}
+            >
+              {filter}
+            </Badge>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <Card key={project.title} className="flex flex-col hover:border-primary/50 transition-colors">
               <CardHeader>
                 <CardTitle className="text-lg">{project.title}</CardTitle>
                 <CardDescription className="text-sm">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col gap-4">
-                <div>
-                  <p className="text-xs text-muted-foreground font-medium mb-2">Impact</p>
-                  <p className="text-sm text-foreground">{project.impact}</p>
-                </div>
-                <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="flex flex-wrap gap-2">
                   {project.techs.map((tech) => (
                     <Badge key={tech} variant="secondary" className="text-xs">
                       {tech}
                     </Badge>
                   ))}
+                </div>
+                <div className="flex gap-2 mt-auto">
+                  {project.github && (
+                    <Link href={project.github} target="_blank" className="text-xs text-primary hover:underline">
+                      GitHub
+                    </Link>
+                  )}
+                  {project.live && (
+                    <Link href={project.live} target="_blank" className="text-xs text-primary hover:underline">
+                      Live Demo
+                    </Link>
+                  )}
                 </div>
               </CardContent>
             </Card>

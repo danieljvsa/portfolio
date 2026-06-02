@@ -13,16 +13,13 @@ export default function About() {
           {/* Main Content */}
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              I&apos;m a backend engineer based in Porto, Portugal, passionate about building distributed systems that scale reliably. 
-              My expertise spans IoT platforms, geospatial technology, GNSS systems, and real-time data processing.
+              I&apos;m a Software Engineer specializing in backend development, distributed systems and IoT platforms. Throughout my career, I&apos;ve worked on vehicle tracking systems, telemetry platforms, AI-powered retail solutions and enterprise-grade backend services.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Over the years, I&apos;ve architected solutions handling thousands of concurrent connections, optimized complex database queries, 
-              and implemented microservices that process millions of data points daily.
+              My interests include GNSS/Galileo technologies, aerospace software, event-driven architectures and open-source development. I enjoy building practical tools that solve real-world problems and sharing them with the developer community.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I believe in writing clean, maintainable code and designing systems where complexity is hidden behind elegant abstractions. 
-              Every decision is driven by reliability, performance, and operational clarity.
+              Based in Porto, Portugal, I&apos;m currently at CEiiA developing backend services and distributed systems for mobility and sustainability platforms.
             </p>
           </div>
 
@@ -30,34 +27,34 @@ export default function About() {
           <div className="grid grid-cols-2 gap-4">
             <Card>
               <CardHeader className="pb-3">
-                <CardTitle className="text-2xl">5+</CardTitle>
+                <CardTitle className="text-2xl">4+</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">Years in Backend Engineering</p>
+                <p className="text-sm text-muted-foreground">Years Experience</p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader className="pb-3">
-                <CardTitle className="text-2xl">10k+</CardTitle>
+                <CardTitle className="text-2xl">49</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">Concurrent Connections Handled</p>
+                <p className="text-sm text-muted-foreground">Repositories</p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader className="pb-3">
-                <CardTitle className="text-2xl">99.9%</CardTitle>
+                <CardTitle className="text-2xl">68</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">System Uptime Target</p>
+                <p className="text-sm text-muted-foreground">GitHub Stars</p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader className="pb-3">
-                <CardTitle className="text-2xl">3</CardTitle>
+                <CardTitle className="text-2xl">OSS</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">Languages Fluent</p>
+                <p className="text-sm text-muted-foreground">Open Source Focus</p>
               </CardContent>
             </Card>
           </div>

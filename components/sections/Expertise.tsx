@@ -4,24 +4,24 @@ import { Badge } from '@/components/ui/badge'
 export default function Expertise() {
   const areas = [
     {
-      title: 'Distributed Systems',
-      description: 'Microservices architecture, event-driven systems, and message queues',
-      skills: ['Microservices', 'Event Sourcing', 'Message Queues', 'Load Balancing']
+      title: 'Backend Systems',
+      description: 'Reliable and scalable backend architectures',
+      skills: ['Go', 'Java', 'Spring Boot', 'Node.js', 'REST APIs', 'gRPC']
     },
     {
-      title: 'Data & Databases',
-      description: 'SQL optimization, time-series data, and geospatial queries',
-      skills: ['PostgreSQL', 'Query Optimization', 'Geospatial', 'Time-Series']
+      title: 'Cloud & Infrastructure',
+      description: 'Modern cloud platforms and deployment strategies',
+      skills: ['Docker', 'Kafka', 'PostgreSQL', 'Redis', 'Linux', 'CI/CD']
     },
     {
-      title: 'IoT & Real-Time',
-      description: 'Device management, telemetry aggregation, and real-time processing',
-      skills: ['MQTT', 'IoT Protocols', 'Real-Time APIs', 'Data Streaming']
+      title: 'IoT & Telemetry',
+      description: 'Device communication and real-time data processing',
+      skills: ['TCP', 'UDP', 'GPS', 'GNSS', 'Device Communication', 'Real-time Ingestion']
     },
     {
-      title: 'Infrastructure & DevOps',
-      description: 'Containerization, orchestration, and cloud deployment',
-      skills: ['Kubernetes', 'Docker', 'AWS', 'CI/CD']
+      title: 'Architecture',
+      description: 'System design and distributed patterns',
+      skills: ['Microservices', 'Event-driven Systems', 'Hexagonal Architecture', 'Distributed Systems']
     }
   ]
 

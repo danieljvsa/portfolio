@@ -15,25 +15,29 @@ export default function Hero() {
 
         {/* Main Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">
-          Building Resilient <span className="bg-gradient-to-r from-primary via-blue-500 to-cyan-500 bg-clip-text text-transparent">Infrastructure</span> at Scale
+          Backend Engineer building reliable systems for <span className="bg-gradient-to-r from-primary via-blue-500 to-cyan-500 bg-clip-text text-transparent">IoT, telemetry, geospatial platforms</span> and developer tools.
         </h1>
 
         {/* Description */}
         <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance leading-relaxed">
-          I specialize in distributed systems, IoT platforms, GNSS technology, and telemetry solutions. 
-          Focused on building production-grade backends that handle complexity with elegance and precision.
+          Software Engineer focused on backend systems, distributed architectures, IoT platforms and telemetry solutions. Passionate about open source, GNSS technologies and building reliable software.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Link href="#contact">
+          <Link href="#projects">
             <Button size="lg" className="text-base">
-              Get in Touch
+              View Projects
             </Button>
           </Link>
-          <Link href="/cv/danieljvsa_cv.pdf" target="_blank">
+          <Link href="#contact">
             <Button size="lg" variant="outline" className="text-base">
-              Download CV
+              Contact Me
+            </Button>
+          </Link>
+          <Link href="https://github.com/danieljvsa" target="_blank">
+            <Button size="lg" variant="outline" className="text-base">
+              GitHub
             </Button>
           </Link>
         </div>
@@ -42,7 +46,7 @@ export default function Hero() {
         <div className="inline-block">
           <p className="text-sm text-muted-foreground mb-3">Core Technologies</p>
           <div className="flex flex-wrap gap-2 justify-center">
-            {['Node.js', 'PostgreSQL', 'AWS', 'Kubernetes', 'Go'].map((tech) => (
+            {['Node.js', 'Java', 'Go', 'PostgreSQL', 'Kafka', 'Docker'].map((tech) => (
               <Badge key={tech} variant="secondary" className="text-xs">
                 {tech}
               </Badge>
