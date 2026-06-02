@@ -1,33 +1,31 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import { Aboutme } from '../components/Aboutme'
-import { Contact } from '../components/Contact'
-import { Header } from '../components/Header'
-import { Knowledge } from '../components/Knowledge'
-import { Projects } from '../components/Projects'
-import { Title } from '../components/Title'
-import { EngineeringFocus } from '../components/EngineeringFocus'
-import { ExperienceTimeline } from '../components/ExperienceTimeline'
-import { CurrentExploration } from '../components/CurrentExploration'
+import Navbar from '@/components/sections/Navbar'
+import Hero from '@/components/sections/Hero'
+import About from '@/components/sections/About'
+import Expertise from '@/components/sections/Expertise'
+import Projects from '@/components/sections/Projects'
+import OpenSource from '@/components/sections/OpenSource'
+import Experience from '@/components/sections/Experience'
+import Contact from '@/components/sections/Contact'
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
         <title>Daniel Sá | Backend Engineer & Distributed Systems</title>
-        <meta name="description" content="Backend engineer specializing in distributed systems, geospatial platforms, and GNSS technology." />
+        <meta name="description" content="Backend engineer specializing in distributed systems, IoT, GNSS, and telemetry platforms." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Header />
+      <Navbar />
       <main>
-        <Title />
-        <EngineeringFocus />
-        <ExperienceTimeline />
+        <Hero />
+        <About />
+        <Expertise />
         <Projects />
-        <CurrentExploration />
-        <Knowledge />
-        <Aboutme />
+        <OpenSource />
+        <Experience />
         <Contact />
       </main>
     </>
