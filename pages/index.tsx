@@ -1,35 +1,50 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Script from 'next/script'
-import React from 'react'
-import { Aboutme } from '../components/Aboutme'
-import { Contact } from '../components/Contact'
-import { Header } from '../components/Header'
-import { Knowledge } from '../components/Knowledge'
-import { Projects } from '../components/Projects'
-import { Title } from '../components/Title'
+import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.scss'
 
-const Home: NextPage = () => {
-  return (
-    <div className={styles.main_container}>
-      <Head>
-        <title>Daniel Sá | Portfolio</title>
-      </Head>
-      <Header />
-      <main className={styles.main}>
-            <Title />
-            <main className={styles.main_body}>
-                <Aboutme />
-                <Projects />
-                <Knowledge />
-                <Contact />
-            </main>
-      </main>
-        
-      <Script type="text/javascript" src="script.js"></Script>
-    </div>
-  )
-}
+type Locale = 'en' | 'pt'
+type Project = { name: string; description: string; stack: string[]; outcome: string; href?: string; private?: boolean }
 
+const content = {
+  en: { nav: ['Work', 'Focus', 'About'], toggle: 'PT', location: 'Based in Porto, Portugal', hero: <>I build <em>reliable backends</em> for products that need to last.</>, intro: 'Backend Engineer at CEiiA, focused on API design, data-driven systems, integrations, and maintainable Go services.', work: 'View selected work', contact: 'Get in touch', current: 'Current focus', now: 'Go · APIs · integrations · reliable systems', selected: 'Selected work', selectedLead: 'A small selection of public work and production-minded engineering experience.', focus: 'Engineering focus', focusLead: 'The practices I bring to backend systems from first design through ongoing maintenance.', about: 'About', aboutLead: 'Clear thinking, thoughtful implementation, and systems that remain understandable as they grow.', aboutCopy: 'I am a backend engineer based in Porto, Portugal. I enjoy turning product requirements into clean, dependable services—whether that means defining an API, modelling data, integrating external systems, or investigating a difficult production issue.', contactTitle: <>Let’s build something <em>that holds up.</em></>, contactLead: 'Have a backend, integration, or data-systems challenge? I would be glad to talk.', cv: 'Download CV (PT)', repos: 'View GitHub', source: 'View source', professional: 'Professional experience', footer: 'Daniel Sá · Backend Engineer', ceiiA: 'Production backend services, APIs, databases, and integrations.', open: 'Go tooling for real-world GPS device integrations.', learning: 'Deepening concurrency, performance, and development tooling.' },
+  pt: { nav: ['Projetos', 'Especialidades', 'Sobre'], toggle: 'EN', location: 'Porto, Portugal', hero: <>Desenvolvo <em>backends fiáveis</em> para produtos feitos para durar.</>, intro: 'Backend Engineer na CEiiA, com foco em design de APIs, sistemas orientados a dados, integrações e serviços Go sustentáveis.', work: 'Ver projetos', contact: 'Entrar em contacto', current: 'Foco atual', now: 'Go · APIs · integrações · sistemas fiáveis', selected: 'Projetos selecionados', selectedLead: 'Uma seleção de trabalho público e experiência de engenharia orientada para produção.', focus: 'Especialidades', focusLead: 'Práticas que aplico em sistemas backend, do desenho à manutenção contínua.', about: 'Sobre mim', aboutLead: 'Pensamento claro, implementação cuidada e sistemas que se mantêm compreensíveis à medida que crescem.', aboutCopy: 'Sou backend engineer no Porto, Portugal. Gosto de transformar requisitos de produto em serviços claros e fiáveis — seja a definir uma API, modelar dados, integrar sistemas externos ou investigar um problema complexo em produção.', contactTitle: <>Vamos criar algo <em>feito para durar.</em></>, contactLead: 'Tens um desafio de backend, integração ou sistemas de dados? Vamos conversar.', cv: 'Descarregar CV (PT)', repos: 'Ver GitHub', source: 'Ver código', professional: 'Experiência profissional', footer: 'Daniel Sá · Backend Engineer', ceiiA: 'Serviços backend em produção, APIs, bases de dados e integrações.', open: 'Ferramentas Go para integrações com dispositivos GPS no mundo real.', learning: 'A aprofundar concorrência, performance e ferramentas de desenvolvimento.' }
+} as const
+
+const projects: Record<Locale, Project[]> = {
+  en: [{ name: 'Teltonika Go', description: 'A lightweight Go library for decoding and working with binary data from Teltonika GPS devices.', stack: ['Go', 'Binary protocols', 'IoT'], outcome: 'Built around correctness, extensibility, documentation, and testability.', href: 'https://github.com/danieljvsa/teltonika-go' }, { name: 'Backend systems at CEiiA', description: 'Backend engineering in a multidisciplinary, production-focused environment.', stack: ['APIs', 'Data systems', 'Integrations'], outcome: 'Contribute to reliable services, maintainable code, and cross-functional delivery.', private: true }, { name: 'Plate Recon', description: 'A private-garage security system built around vehicle plate recognition.', stack: ['TypeScript', 'Computer vision', 'Security'], outcome: 'Explores a focused, real-world safety workflow.', href: 'https://github.com/danieljvsa/plate-recon' }, { name: 'Hopway', description: 'A simple tool for planning a backpacking adventure.', stack: ['JavaScript', 'Product design', 'Web'], outcome: 'A practical product concept with a clear user journey.', href: 'https://github.com/danieljvsa/hopway' }],
+  pt: [{ name: 'Teltonika Go', description: 'Biblioteca Go leve para descodificar e trabalhar com dados binários de dispositivos GPS Teltonika.', stack: ['Go', 'Protocolos binários', 'IoT'], outcome: 'Desenvolvida com foco em correção, extensibilidade, documentação e testes.', href: 'https://github.com/danieljvsa/teltonika-go' }, { name: 'Sistemas backend na CEiiA', description: 'Engenharia backend num contexto multidisciplinar e orientado para produção.', stack: ['APIs', 'Sistemas de dados', 'Integrações'], outcome: 'Contributo para serviços fiáveis, código sustentável e entrega colaborativa.', private: true }, { name: 'Plate Recon', description: 'Sistema de segurança para garagens privadas baseado em reconhecimento de matrículas.', stack: ['TypeScript', 'Visão computacional', 'Segurança'], outcome: 'Explora um fluxo de segurança focado num problema real.', href: 'https://github.com/danieljvsa/plate-recon' }, { name: 'Hopway', description: 'Ferramenta simples para planear uma aventura de mochila às costas.', stack: ['JavaScript', 'Produto', 'Web'], outcome: 'Um conceito de produto prático, com uma jornada de utilizador clara.', href: 'https://github.com/danieljvsa/hopway' }]
+}
+const focus = { en: [['01', 'API design', 'Clear, versionable contracts that make systems easier to use and change.'], ['02', 'Data & persistence', 'Thoughtful data modelling across relational and NoSQL stores.'], ['03', 'Integrations', 'Robust connections between internal services, devices, and third-party platforms.'], ['04', 'Quality & clarity', 'Testable code, useful documentation, pragmatic reviews, and steady delivery.'], ['05', 'Performance', 'Careful debugging and analysis where reliability or response time matters.'], ['06', 'Ownership', 'From technical discovery through implementation, maintenance, and knowledge sharing.']], pt: [['01', 'Design de APIs', 'Contratos claros e versionáveis, fáceis de usar e alterar.'], ['02', 'Dados e persistência', 'Modelação de dados ponderada, em bases relacionais e NoSQL.'], ['03', 'Integrações', 'Ligações robustas entre serviços internos, dispositivos e plataformas externas.'], ['04', 'Qualidade e clareza', 'Código testável, documentação útil, revisões pragmáticas e entrega consistente.'], ['05', 'Performance', 'Análise e debugging cuidado quando a fiabilidade ou o tempo de resposta importam.'], ['06', 'Responsabilidade', 'Da descoberta técnica à implementação, manutenção e partilha de conhecimento.']] } as const
+
+const experience = {
+  en: [
+    { period: 'Jul 2025 — Present', role: 'Backend Developer · CEiiA', detail: 'Building Java services and APIs for mobility-trip validation, event-driven processing, and partner integrations using Kafka, Redis, PostgreSQL, and Docker.' },
+    { period: 'Aug 2023 — Jun 2025', role: 'Backend Developer · Reckon.ai', detail: 'Maintained and extended Node.js and MongoDB services and a back-office platform for AI-enabled retail machines.' },
+    { period: 'Sep 2022 — Jul 2023', role: 'Software Developer · Gisgeo', detail: 'Developed and maintained Java device-server services decoding real-time tracking payloads over TCP/UDP, while contributing to a Python asyncio migration path.' }
+  ],
+  pt: [
+    { period: 'Jul 2025 — Presente', role: 'Backend Developer · CEiiA', detail: 'Desenvolvimento de serviços Java e APIs para validação de viagens, processamento orientado a eventos e integrações com parceiros, usando Kafka, Redis, PostgreSQL e Docker.' },
+    { period: 'Ago 2023 — Jun 2025', role: 'Backend Developer · Reckon.ai', detail: 'Manutenção e evolução de serviços Node.js e MongoDB e de uma plataforma de back-office para máquinas de retalho com IA.' },
+    { period: 'Set 2022 — Jul 2023', role: 'Software Developer · Gisgeo', detail: 'Desenvolvimento e manutenção de serviços Java que descodificam dados de localização em tempo real por TCP/UDP, contribuindo também para uma migração inicial para Python asyncio.' }
+  ]
+} as const
+
+const Home: NextPage = () => {
+  const [locale, setLocale] = useState<Locale>('en')
+  useEffect(() => { if (window.localStorage.getItem('portfolio-locale') === 'pt') setLocale('pt') }, [])
+  useEffect(() => { document.documentElement.lang = locale }, [locale])
+  const switchLocale = () => setLocale(current => { const next = current === 'en' ? 'pt' : 'en'; window.localStorage.setItem('portfolio-locale', next); return next })
+  const t = content[locale]
+  const languageLabel = locale === 'en' ? 'Switch language to Portuguese' : 'Mudar idioma para inglês'
+  const languageStatus = locale === 'en' ? 'Language changed to English' : 'Idioma alterado para português'
+  const cvLabel = locale === 'en' ? 'Download CV' : 'Descarregar CV'
+  return <div className={styles.page} id="top"><Head><title>Daniel Sá — Backend Engineer</title><meta name="description" content="Daniel Sá is a Backend Engineer building reliable APIs, integrations, and data-driven systems." /></Head>
+    <a className={styles.skipLink} href="#main-content">{locale === 'en' ? 'Skip to content' : 'Saltar para o conteúdo'}</a><header className={styles.nav}><a className={styles.brand} href="#top">Daniel Sá / BE</a><nav className={styles.navLinks} aria-label={locale === 'en' ? 'Main navigation' : 'Navegação principal'}><a href="#work">{t.nav[0]}</a><a href="#focus">{t.nav[1]}</a><a href="#about">{t.nav[2]}</a><button className={styles.language} onClick={switchLocale} aria-label={languageLabel}>{t.toggle}</button></nav></header><span className={styles.srOnly} aria-live="polite">{languageStatus}</span>
+    <main id="main-content"><section className={styles.hero}><div><p className={styles.eyebrow}><span className={styles.status} /> {t.location}</p><h1 className={styles.title}>{t.hero}</h1><p className={styles.intro}>{t.intro}</p><div className={styles.actions}><a className={styles.button} href="#work">{t.work}</a><a className={styles.buttonSecondary} href="mailto:danielviana18@gmail.com">{t.contact}</a></div></div><aside className={styles.heroNote}><strong>{t.current}</strong>{t.now}</aside></section>
+      <section className={styles.section} id="work"><div className={styles.sectionHeader}><p className={styles.kicker}>01 / {t.selected}</p><div><h2 className={styles.sectionTitle}>{t.selected}</h2><p className={styles.sectionLead}>{t.selectedLead}</p></div></div><div className={styles.projectGrid}>{projects[locale].map((project, index) => <article className={styles.project} key={project.name}><span className={styles.projectIndex}>0{index + 1}</span><h3>{project.name}</h3><p>{project.description}</p><div className={styles.tags}>{project.stack.map(tag => <span className={styles.tag} key={tag}>{tag}</span>)}</div><div className={styles.projectFooter}><span className={styles.outcome}>{project.outcome}</span>{project.href ? <a className={styles.projectLink} href={project.href} target="_blank" rel="noreferrer">{t.source} ↗</a> : <span className={styles.projectLink}>{t.professional}</span>}</div></article>)}</div></section>
+      <section className={styles.section} id="focus"><div className={styles.sectionHeader}><p className={styles.kicker}>02 / {t.focus}</p><div><h2 className={styles.sectionTitle}>{t.focus}</h2><p className={styles.sectionLead}>{t.focusLead}</p></div></div><div className={styles.focus}>{focus[locale].map(([number, title, description]) => <article className={styles.focusItem} key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></article>)}</div></section>
+      <section className={styles.section} id="about"><div className={styles.sectionHeader}><p className={styles.kicker}>03 / {t.about}</p><div><h2 className={styles.sectionTitle}>{t.about}</h2><p className={styles.sectionLead}>{t.aboutLead}</p></div></div><div className={styles.about}><p className={styles.aboutCopy}>{t.aboutCopy}</p><div className={styles.timeline}>{experience[locale].map(item => <article className={styles.timelineItem} key={item.role}><small>{item.period}</small><h3>{item.role}</h3><p>{item.detail}</p></article>)}</div></div></section>
+      <section className={styles.contact}><h2>{t.contactTitle}</h2><p>{t.contactLead}</p><div className={styles.actions} style={{ justifyContent: 'center' }}><a className={styles.button} href="mailto:danielviana18@gmail.com">{t.contact}</a><a className={styles.buttonSecondary} href="/cv/danieljvsa_cv.pdf" download>{cvLabel}</a></div><div className={styles.contactLinks} style={{ marginTop: 32 }}><a href="https://www.linkedin.com/in/danieljvsa/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/danieljvsa" target="_blank" rel="noreferrer">GitHub ↗</a></div></section></main><footer className={styles.footer}><span>{t.footer}</span><span>Porto, Portugal · 2026</span></footer></div>
+}
 export default Home
