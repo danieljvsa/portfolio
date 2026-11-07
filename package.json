@@ -6,10 +6,11 @@
     "dev": "npx next dev",
     "build": "npx next build",
     "start": "npx next start",
-    "lint": "npx next lint"
+    "lint": "eslint .",
+    "test": "npm run build && node scripts/smoke.cjs"
   },
   "dependencies": {
-    "next": "^15.5.0",
+    "next": "^16.4.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "sass": "^1.90.0"
@@ -18,8 +19,15 @@
     "@types/node": "^24.0.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^15.5.0",
+    "axe-core": "^4.14.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.5",
+    "playwright-core": "^1.65.0",
     "typescript": "^5.9.0"
+  },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.1"
+    }
   }
 }

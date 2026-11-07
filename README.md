@@ -1,33 +1,21 @@
-<h1 align="center">
-  📰<br>Meu Portfólio
-</h1>
+# Daniel Sá — portfolio
 
-<h4 align="center">
-  Portfólio criado com o intuito de mostrar meus projetos ao decorrer da minha carreira.
-</h4>
+A bilingual portfolio built with Next.js, React, TypeScript and Sass. It presents selected projects, engineering experience and contact details.
 
-<img src="https://github.com/danieljvsa/portfolio/blob/main/public/assets/portfolio.PNG" align="center" />
+## Getting started
 
-<h4 align="center"><a href="https://danieljvsa.vercel.app/">Clique para visitar o projeto</a></h4>
+Use Node.js 20.9 or newer and install dependencies with `npm ci`. Run `npm run dev` and open the local URL printed by Next.js.
 
-## 📚 Seções
-O site é composto por 5 seções diferentes:
+Development uses `.next-dev` while production builds use `.next`, so builds and tests can run while the development server is running.
 
-- **Home:** Nele temos um avatar do meu github e um breve apresentação;
-- **Sobre mim:** Nessa seção tenho uma descrição dizendo um pouco sobre mim;
-- **Projetos:** Apresenta alguns projetos desenvolvidos e com link direto para os respectivos códigos no GitHub;
-- **Conhecimentos:** Nele apresentamos meus conhecimentos em algumas linguagens e tecnologias;
-- **Contactos:** Nele estão as formas para entrar em contacto comigo;
----
+The English site is at `/` and the Portuguese site is at `/pt`.
 
-## 💼 Tecnologias utilizadas
-Para o desenvolvimento deste site utilizei as seguintes tecnologias:
+## Checks
 
-- ReactJS;
-- NextJS;
-- JavaScript;
-- Sass;
+- `npm run lint` checks the source with ESLint.
+- `npm run build` builds the production site.
+- `npm test` builds the site, starts an isolated local server and runs browser smoke and axe accessibility checks at a narrow viewport. Chrome, Edge or Chromium must be installed; set `CHROME_PATH` if it is not in a standard location.
+- `npm audit` checks npm dependencies for known advisories.
+- `trivy fs --scanners vuln,secret,misconfig --include-dev-deps .` scans dependencies, secrets and supported configuration files when Trivy is installed.
 
----
-
-Feito com 💜 by Daniel Sá 
+The minimatch override addresses a known advisory in the TypeScript ESLint dependency tree. Revisit it when upstream supports a patched version.

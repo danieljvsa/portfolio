@@ -7,9 +7,11 @@
 
 # testing
 /coverage
+/.trivy-cache/
 
 # next.js
 /.next/
+/.next-dev/
 /out/
 
 # production
